@@ -2,6 +2,21 @@
   "name": "symbol-api-node-selector",
   "version": "1.0.0",
   "author": "ccHarvestasya @ccHarvestasya",
+  "description": "A package to select the fastest Symbol API node.",
+  "keywords": [
+    "symbol",
+    "api",
+    "node",
+    "selector"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nemneshia/symbol-api-node-selector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nemneshia/symbol-api-node-selector/issues"
+  },
+  "homepage": "https://github.com/nemneshia/symbol-api-node-selector#readme",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
