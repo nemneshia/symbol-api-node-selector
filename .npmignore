@@ -1,0 +1,8 @@
+.*
+.yarn
+.pnp.*
+.vscode
+node_modules
+src
+openapi
+tsconfig.json

@@ -1,0 +1,40 @@
+{
+  "name": "symbol-api-node-selector",
+  "version": "1.0.0",
+  "author": "ccHarvestasya @ccHarvestasya",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "packageManager": "yarn@4.6.0",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "yarn format && tsc",
+    "build:noemit": "yarn format && tsc --noEmit",
+    "version:major": "yarn build && npm version major",
+    "version:minor": "yarn build && npm version minor",
+    "version:patch": "yarn build && npm version patch",
+    "publish": "npm publish --access=public",
+    "publish:dryrun": "npm pack --dry-run",
+    "generate:api": "openapi-typescript openapi/openapi.yml --output src/schema.ts",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^20.17.13",
+    "eslint": "^9.18.0",
+    "openapi-typescript": "^7.5.2",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "openapi-fetch": "^0.13.4"
+  }
+}
